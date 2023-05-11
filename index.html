@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button class="toggle-btn" onclick="register()">Sign Up</button>
+        <button class="toggle-btn" onclick="login()">Log In</button>
+      </div>
+      <div class="form">
+        <form action="/" method="post" id="signup" class="input-group">
+          <div class="upper">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="First Name*"
+              required
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Last Name*"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email Address*"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            id="password"
+            class="input-field"
+            placeholder="Set a Password"
+            required
+            autocomplete="new-password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long."
+          />
+          <input
+            type="password"
+            id="confirmPassword"
+            class="input-field"
+            placeholder="Confirm password*"
+            required
+            autocomplete="new-password"
+          />
+          <input
+            type="checkbox"
+            class="check-box"
+            required
+            autocomplete="off"
+          /><span>Agree to terms and conditions</span>
+          <div class="submit">
+            <button
+              type="submit"
+              class="submit-btn"
+              id="submitButton"
+              onclick="register()"
+            >
+              GET STARTED
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form">
+        <form id="login" class="input-group">
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email Address*"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password*"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="checkbox"
+            class="check-box"
+            required
+            autocomplete="off"
+          /><span>Remember me</span>
+          <div class="submit">
+            <button type="submit" class="submit-btn" id="loginButton" onclick="login()">LOGIN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
